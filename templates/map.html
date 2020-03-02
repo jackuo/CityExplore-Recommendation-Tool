@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f1339bfc2c5843b68b8f42343313278a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f1339bfc2c5843b68b8f42343313278a" ></div>
+        
+</body>
+<script>    
+    
+            var map_f1339bfc2c5843b68b8f42343313278a = L.map(
+                "map_f1339bfc2c5843b68b8f42343313278a",
+                {
+                    center: [40.6826285611111, -73.95351971489923],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_20c057b8d3024450956a86310aaaf781 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+            var circle_marker_ec72212d2c12424f918900b4cac7b8e8 = L.circleMarker(
+                [40.6888309, -73.9574106359495],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_f2990e1afd5548c682e4fc1fc35bdfc8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_033a77b0cfa944199abf8fdd2ed55ca9 = $(`<div id="html_033a77b0cfa944199abf8fdd2ed55ca9" style="width: 100.0%; height: 100.0%;">La Belle Boutique</div>`)[0];
+            popup_f2990e1afd5548c682e4fc1fc35bdfc8.setContent(html_033a77b0cfa944199abf8fdd2ed55ca9);
+        
+
+        circle_marker_ec72212d2c12424f918900b4cac7b8e8.bindPopup(popup_f2990e1afd5548c682e4fc1fc35bdfc8)
+        ;
+
+        
+    
+    
+            var circle_marker_22fda63fde694399b3d55cf90d7db6dc = L.circleMarker(
+                [40.6820143, -73.9497649],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_9c08853319574910b99a100e53f8582e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33c3bd7119d44252a5832469b999a394 = $(`<div id="html_33c3bd7119d44252a5832469b999a394" style="width: 100.0%; height: 100.0%;"> N-Diya</div>`)[0];
+            popup_9c08853319574910b99a100e53f8582e.setContent(html_33c3bd7119d44252a5832469b999a394);
+        
+
+        circle_marker_22fda63fde694399b3d55cf90d7db6dc.bindPopup(popup_9c08853319574910b99a100e53f8582e)
+        ;
+
+        
+    
+    
+            var circle_marker_7d520b94ea914e25bb26c6be96c66254 = L.circleMarker(
+                [40.68314735, -73.9641720766177],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_474c1e6ddf7a4f6d9ef4d3610e3587b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dcaf8321a96445b2b59c9bf5b7f46e42 = $(`<div id="html_dcaf8321a96445b2b59c9bf5b7f46e42" style="width: 100.0%; height: 100.0%;">Park Sports Physical Therapy</div>`)[0];
+            popup_474c1e6ddf7a4f6d9ef4d3610e3587b3.setContent(html_dcaf8321a96445b2b59c9bf5b7f46e42);
+        
+
+        circle_marker_7d520b94ea914e25bb26c6be96c66254.bindPopup(popup_474c1e6ddf7a4f6d9ef4d3610e3587b3)
+        ;
+
+        
+    
+    
+            var circle_marker_4213cb4fe71b46d5ba3d257531974e8d = L.circleMarker(
+                [40.68862735, -73.9604906487631],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_200dffd29ea54447a6f9db4219e47c26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6fb05b01772459c956498ed9e28d5ff = $(`<div id="html_e6fb05b01772459c956498ed9e28d5ff" style="width: 100.0%; height: 100.0%;">The Market</div>`)[0];
+            popup_200dffd29ea54447a6f9db4219e47c26.setContent(html_e6fb05b01772459c956498ed9e28d5ff);
+        
+
+        circle_marker_4213cb4fe71b46d5ba3d257531974e8d.bindPopup(popup_200dffd29ea54447a6f9db4219e47c26)
+        ;
+
+        
+    
+    
+            var circle_marker_853b92880cb6482396a1afe674c8f13e = L.circleMarker(
+                [40.6837285, -73.9230558],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_36478406791e43e0a9b993f96d572a8a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ce3dfba356b450f923f260771267e22 = $(`<div id="html_7ce3dfba356b450f923f260771267e22" style="width: 100.0%; height: 100.0%;">Greedi Kitchen</div>`)[0];
+            popup_36478406791e43e0a9b993f96d572a8a.setContent(html_7ce3dfba356b450f923f260771267e22);
+        
+
+        circle_marker_853b92880cb6482396a1afe674c8f13e.bindPopup(popup_36478406791e43e0a9b993f96d572a8a)
+        ;
+
+        
+    
+    
+            var circle_marker_a59b1b26204a45f78b382db08208f85d = L.circleMarker(
+                [40.69099455, -73.9558943379597],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_3e65632dbbff48d8931b4eadf16bdabd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c699270d63074b26bc76563b63652420 = $(`<div id="html_c699270d63074b26bc76563b63652420" style="width: 100.0%; height: 100.0%;">Fan Fried Rice Bar</div>`)[0];
+            popup_3e65632dbbff48d8931b4eadf16bdabd.setContent(html_c699270d63074b26bc76563b63652420);
+        
+
+        circle_marker_a59b1b26204a45f78b382db08208f85d.bindPopup(popup_3e65632dbbff48d8931b4eadf16bdabd)
+        ;
+
+        
+    
+    
+            var circle_marker_942f809edc9e4816baca0660e48c829c = L.circleMarker(
+                [40.6739695, -73.9504234348032],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_ea202bd93b394fc0b112eed139dbcd11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf2203819b0f46849ab349c74cd50f94 = $(`<div id="html_bf2203819b0f46849ab349c74cd50f94" style="width: 100.0%; height: 100.0%;">Super Power</div>`)[0];
+            popup_ea202bd93b394fc0b112eed139dbcd11.setContent(html_bf2203819b0f46849ab349c74cd50f94);
+        
+
+        circle_marker_942f809edc9e4816baca0660e48c829c.bindPopup(popup_ea202bd93b394fc0b112eed139dbcd11)
+        ;
+
+        
+    
+    
+            var circle_marker_2268f397369648d7bda7f2d8e692f0bc = L.circleMarker(
+                [40.6774342, -73.9638702],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_5ebc235ec6a6412d97e74c5d2067b61b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d04b2d14e35d46d5858920e93298ae3d = $(`<div id="html_d04b2d14e35d46d5858920e93298ae3d" style="width: 100.0%; height: 100.0%;">Bearded Lady</div>`)[0];
+            popup_5ebc235ec6a6412d97e74c5d2067b61b.setContent(html_d04b2d14e35d46d5858920e93298ae3d);
+        
+
+        circle_marker_2268f397369648d7bda7f2d8e692f0bc.bindPopup(popup_5ebc235ec6a6412d97e74c5d2067b61b)
+        ;
+
+        
+    
+    
+            var circle_marker_2bc2896fa80747cd82fb355b7e222fb5 = L.circleMarker(
+                [40.6749104, -73.9565954],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_f1339bfc2c5843b68b8f42343313278a);
+        
+    
+        var popup_5d9f42ce8dca412c9c372c2c9406edb6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43d519dda43d431986582e456b679525 = $(`<div id="html_43d519dda43d431986582e456b679525" style="width: 100.0%; height: 100.0%;">Mayfield</div>`)[0];
+            popup_5d9f42ce8dca412c9c372c2c9406edb6.setContent(html_43d519dda43d431986582e456b679525);
+        
+
+        circle_marker_2bc2896fa80747cd82fb355b7e222fb5.bindPopup(popup_5d9f42ce8dca412c9c372c2c9406edb6)
+        ;
+
+        
+    
+</script>

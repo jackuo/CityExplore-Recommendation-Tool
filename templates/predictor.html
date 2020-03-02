@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <title>YelpExplore</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="static/images/icons/yelp.png"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="static/css/util.css">
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+<!--===============================================================================================-->
+</head>
+
+<body>
+
+  <style>
+    body{
+      /*background-image: url("static/images/gifs/ezgif.com-rotate.gif"), url("static/images/gifs/ezgif.com-crop.gif");*/
+      background-size: auto;
+      background-position: 95% 10%, 5% 10%;
+      /* background-position: right center, left center; */
+      background-size: 20%;
+      background-attachment: inherit;
+      background-repeat: no-repeat, no-repeat;
+      background-color: #F5F5F5;
+    }
+  </style>
+
+  <div id="example1" class="limiter">
+    <div class="container-table100">
+      <div class="wrap-table100">
+        <div class="table100">
+          <div style="max-width:25%; margin-left: auto; margin-right: auto;">
+            <center>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg" alt="Twitch Logo">
+            </center>
+          </div>
+  {% block header %}
+  <form action="/">
+    <div style="text-align: center;">
+      <br>
+        <h1 class="headertext">Welcome to YelpExplore!</h1>
+        <br>
+        <br>
+        Select a Neighborhood:
+        <br>
+        <select name=neighborhood_list method="GET" action="/">
+          {% for neighborhood in neighborhood_list %}
+            <option value="{{neighborhood}}">{{neighborhood}}</option>
+          {% endfor %}
+        </select>
+        
+        <br>
+        <br>
+        Select 1 - 3 areas that interest you in each category (Activity, Meal, Second Meal):
+    </div>
+    <br>
+    <ul class="list-unstyled row">
+        <li class="col-md-4 col-xs-6"><label> Activity: </label></li>
+        <li class="col-md-4 col-xs-6"><label> Meal: </label></li>
+        <li class="col-md-4 col-xs-6"><label> Second Meal: </label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="0" name="Activity_Checklist"/> Hair</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="0" name="Meal_Checklist"/> Thai</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="0" name="Second_Meal_Checklist"/> Milkshakes</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="1" name="Activity_Checklist"/> Food</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="1" name="Meal_Checklist"/> Ramen</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="1" name="Second_Meal_Checklist"/> Chips, Guac, and Margs</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="2" name="Activity_Checklist"/> Spas</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="2" name="Meal_Checklist"/> Chinese</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="2" name="Second_Meal_Checklist"/> Oysters</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="3" name="Activity_Checklist"/> Museums and Art</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="3" name="Meal_Checklist"/> Fast Food</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="3" name="Second_Meal_Checklist"/> Cake and Pie</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="4" name="Activity_Checklist"/> Tours and Learning New Things</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="4" name="Meal_Checklist"/> Curry</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="4" name="Second_Meal_Checklist"/> Dumplings</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="5" name="Activity_Checklist"/> Theaters and Shows</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="5" name="Meal_Checklist"/> Vietnamese</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="5" name="Second_Meal_Checklist"/> Pancakes</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="6" name="Activity_Checklist"/> Nature/Sightseeing</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="6" name="Meal_Checklist"/> Seafood</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="6" name="Second_Meal_Checklist"/> Wine and Cheese</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="7" name="Activity_Checklist"/> Self-Care</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="7" name="Meal_Checklist"/> Rustic BBQ</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="7" name="Second_Meal_Checklist"/> We Are Going Out</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="8" name="Activity_Checklist"/> Zoos and Animals</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="8" name="Meal_Checklist"/> Sushi</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="8" name="Second_Meal_Checklist"/> Drinking Games</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="9" name="Activity_Checklist"/> Puzzles and Games</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="9" name="Meal_Checklist"/> Mexican</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="9" name="Second_Meal_Checklist"/> Soju</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="10" name="Activity_Checklist"/> Physical Activity and Games</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="10" name="Meal_Checklist"/> Italian</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="10" name="Second_Meal_Checklist"/> Something Exotic</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="11" name="Activity_Checklist"/> Facials and Relaxation</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="11" name="Meal_Checklist"/> Brunch</label></li>
+        <li class="col-md-4 col-xs-6"><label></label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="12" name="Activity_Checklist"/> Shopping</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="12" name="Meal_Checklist"/> Korean</label></li>
+        <li class="col-md-4 col-xs-6"><label></label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="13" name="Activity_Checklist"/> Excursions and Adventures</label></li>
+        <li class="col-md-4 col-xs-6"><label><input type="checkbox" value="13" name="Meal_Checklist"/> Greek</label></li>
+        <li class="col-md-4 col-xs-6"><label></label></li>
+    </ul>
+    <br>
+    <!-- Submit button -->
+    <center>
+    <input align="center" type="submit" value="Let's Go!" method="get" id="rcorners1">
+  </center>
+    <br>
+
+  </form>
+    </div>
+
+  </p>
+  {% endblock %}
+  
+  {% block content %}
+  <div style="text-align: center;">
+      <br>
+      <br>
+      <br>
+        <h1 class="headertext">Recommendations</h1>
+        <br>
+        <br>
+        <iframe src="map.html" width=800 height=600></iframe>
+
+      </br>
+  </div> 
+  <br>
+  {% endblock %}
+
+
+ 
+
+          <div style="text-align: center; color: #808080;">
+          <a href="https://www.linkedin.com/in/jackuo/">Jacqueline Kuo</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--===============================================================================================-->
+  <script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="static/vendor/bootstrap/js/popper.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>
